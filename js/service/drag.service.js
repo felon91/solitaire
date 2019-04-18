@@ -9,12 +9,13 @@ export class Drag {
     if (e.which != 1) {
       return;
     }
-
-    let openCard = e.target.closest('.cards__open > .js-card, .cards__field .open, .cards__element .js-card:last-child:not(.disabled)');
+//.cards__element .js-card:last-child:not(.disabled)
+    let openCard = e.target.closest('.cards__open > .js-card, .cards__field .open, .cards__element .js-card:not(.disabled)');
 
     if (!openCard) return;
 
     dragObject['card'] = openCard;
+    dragObject['parent'] = openCard.parentElement;
     dragObject['downX'] = e.pageX;
     dragObject['downY'] = e.pageY;
 
@@ -141,18 +142,26 @@ function onDragEnd(dragObject, dropElem) {
 
   if (dropElem.classList.contains('cards__element')) {
     if (Correctstack.checkSuit(dragObject, dropElem) && Correctstack.checkCardNumber(dragObject, dropElem)) {
-      dragObject.card.style = '';
-      dropElem.insertAdjacentElement('beforeEnd', dragObject.card);
+      insertCard(dragObject, dropElem);
+      Correctstack.notCards(dragObject, dropElem);
     } else {
       onDragCancel(dragObject);
     }
   } else {
     if (Correctstack.checkSuit(dragObject, dropElem) && Correctstack.checkCardNumber(dragObject, dropElem)) {
-      dragObject.card.style = '';
-      dropElem.insertAdjacentElement('beforeEnd', dragObject.card);
+      insertCard(dragObject, dropElem);
+      Correctstack.notCards(dragObject, dropElem);
     } else {
       onDragCancel(dragObject);
     }
   }
 
+}
+
+function insertCard(dragObject, dropElem) {
+  dragObject.card.style = '';
+  if (dragObject.parent.querySelector('div:last-child')) {
+    dragObject.parent.querySelector('div:last-child').classList.remove('disabled');
+  }
+  dropElem.insertAdjacentElement('beforeEnd', dragObject.card);
 }

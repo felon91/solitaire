@@ -16,9 +16,11 @@ export class Start extends Component {
 
 }
 
+export let time = '';
+
 function startGame(event) {
   const cardsStack = new Stack('cards__shirt', stack);
   const bottomCards = new BottomCards('cards__bottom', {cardsStack: cardsStack});
-  new Timer('cards__timer');
+  time = new Timer('cards__timer');
   document.addEventListener('mousemove', Drag.moveDrag.bind(this));
 }
