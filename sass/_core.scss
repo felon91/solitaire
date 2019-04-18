@@ -1,0 +1,77 @@
+$green: darkgreen;
+$black: #000;
+$white: #fff;
+
+body {
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+	hyphens: auto;
+    background-color: $green;
+}
+
+.container {
+	background-color: $green;
+	width: 100%;
+	height: 100vh;
+}
+
+.diamond, .heart, .spade, .club {
+  color: #f00;
+
+  &::after, &::before {
+    content: "\2666";
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 17px;
+    font-size: 30px;
+    color: #f00;
+  }
+
+  &::before {
+    top: auto;
+    left: auto;
+    right: 5px;
+    bottom: 17px;
+    transform: rotate(180deg);
+  }
+
+}
+
+.heart {
+  color: #f00;
+
+  &::after, &::before {
+    content: "\2665";
+  }
+
+}
+
+.spade {
+  color: #000;
+
+  &::after, &::before {
+    content: "\2660";
+    color: #000;
+  }
+
+}
+
+.club {
+  color: #000;
+
+  &::after, &::before {
+    content: "\2663";
+    color: #000;
+  }
+
+}
+
+.disabled {
+  background: linear-gradient(180deg, #00f, #fff) !important;
+
+  &::before, &::after, span {
+    display: none !important;
+  }
+
+}

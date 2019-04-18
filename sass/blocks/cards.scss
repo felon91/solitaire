@@ -1,0 +1,334 @@
+div.open {
+  background: #fff;
+  width: 100px;
+  height: 140px;
+  position: absolute;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font-size: 20px;
+
+  span {
+    display: block;
+    width: 35px;
+    text-align: center;
+
+    &:first-child {
+      position: absolute;
+      top: 2px;
+    }
+
+    &:last-child {
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+    }
+
+  }
+
+}
+
+.cards {
+  width: 980px;
+  margin: 0 auto;
+  padding: 100px 0;
+  height: 100%;
+  box-sizing: border-box;
+
+  .cards__first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 50px 0;
+  }
+
+  .cards__start {
+    background-color: red;
+    box-shadow: 0 0 5px 0 #000;
+    border: none;
+    width: 200px;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken(red, 10%);
+    }
+
+  }
+
+  .cards__timer {
+    font-size: 26px;
+    line-height: normal;
+    color: #fff;
+  }
+
+  .cards__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cards__stack {
+    position: relative;
+  }
+
+  .cards__shirt {
+    width: 100px;
+    height: 140px;
+    position: relative;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-radius: 5px;
+
+    .disabled {
+      background: linear-gradient(180deg, #00f, #fff);
+      width: 100px;
+      height: 140px;
+      position: absolute;
+      border-radius: 5px;
+      box-shadow: 0 0 1px 1px #000;
+      border: 1px solid #000;
+      cursor: pointer;
+
+      &:nth-last-child(1) {
+        left: 1px;
+        top: 1px;
+      }
+
+      &:nth-last-child(2) {
+        left: 2px;
+        top: 2px;
+      }
+
+      &:nth-last-child(3) {
+        left: 3px;
+        top: 3px;
+      }
+
+      &:nth-last-child(4) {
+        left: 4px;
+        top: 4px;
+      }
+
+      &:nth-last-child(5) {
+        left: 5px;
+        top: 5px;
+      }
+
+      &:nth-last-child(6) {
+        left: 6px;
+        top: 6px;
+      }
+
+    }
+
+    .common {
+      background: none;
+      width: 100px;
+      height: 140px;
+    }
+
+  }
+
+  .cards__open {
+    position: absolute;
+    left: 150px;
+    top: 0;
+    width: 100px;
+    height: 140px;
+
+    div {
+      background: #fff;
+      width: 100px;
+      height: 140px;
+      position: absolute;
+      border-radius: 5px;
+      border: 1px solid #000;
+      font-size: 20px;
+
+      span {
+        display: block;
+        width: 35px;
+        text-align: center;
+
+        &:first-child {
+          position: absolute;
+          top: 2px;
+        }
+
+        &:last-child {
+          position: absolute;
+          right: 0;
+          bottom: 2px;
+        }
+
+      }
+
+    }
+
+    .common {
+      background: none;
+      width: 100px;
+      height: 140px;
+    }
+
+  }
+
+  .cards__fields {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cards__field {
+    width: 100px;
+    height: 140px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: 0 20px;
+    position: relative;
+
+    div {
+      background: #fff;
+      width: 100px;
+      height: 140px;
+      position: absolute;
+      border-radius: 5px;
+      border: 1px solid #000;
+      font-size: 20px;
+
+      span {
+        display: block;
+        width: 35px;
+        text-align: center;
+
+        &:first-child {
+          position: absolute;
+          top: 2px;
+        }
+
+        &:last-child {
+          position: absolute;
+          right: 0;
+          bottom: 2px;
+        }
+
+      }
+
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+
+  .cards__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0;
+  }
+
+  .cards__element {
+    width: 100px;
+    height: 140px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    position: relative;
+
+    div {
+      background: #fff;
+      width: 100px;
+      height: 140px;
+      position: absolute;
+      border-radius: 5px;
+      border: 1px solid #000;
+      font-size: 20px;
+
+      span {
+        display: block;
+        width: 35px;
+        text-align: center;
+
+        &:first-child {
+          position: absolute;
+          top: 2px;
+        }
+
+        &:last-child {
+          position: absolute;
+          right: 0;
+          bottom: 2px;
+        }
+
+      }
+
+      &:nth-child(1) {
+        top: 0px;
+        z-index: 1;
+      }
+
+      &:nth-child(2) {
+        top: 25px;
+        z-index: 2;
+      }
+
+      &:nth-child(3) {
+        top: 50px;
+        z-index: 3;
+      }
+
+      &:nth-child(4) {
+        top: 75px;
+        z-index: 4;
+      }
+
+      &:nth-child(5) {
+        top: 100px;
+        z-index: 5;
+      }
+
+      &:nth-child(6) {
+        top: 125px;
+        z-index: 6;
+      }
+
+      &:nth-child(7) {
+        top: 150px;
+        z-index: 7;
+      }
+
+      &:nth-child(8) {
+        top: 175px;
+        z-index: 8;
+      }
+
+      &:nth-child(9) {
+        top: 200px;
+        z-index: 9;
+      }
+
+      &:nth-child(10) {
+        top: 225px;
+        z-index: 10;
+      }
+
+      &:nth-child(11) {
+        top: 250px;
+        z-index: 11;
+      }
+
+      &:nth-child(12) {
+        top: 275px;
+        z-index: 12;
+      }
+
+      &:nth-child(13) {
+        top: 300px;
+        z-index: 13;
+      }
+
+    }
+
+  }
+
+}
